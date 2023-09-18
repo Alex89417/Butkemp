@@ -1,27 +1,10 @@
-﻿Console.Clear();
+﻿using static Sortings;
+using static Infrastucture;
 
-int[] array = {2, 7, -3, 8, 2, 1};
-
-void SortSelection(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        int min = i;
-        for (int j = i + 1; j < array.Length; j++)
-            if(array[j] < array[min]) min = j;
-        
-        int temp = array[i];
-        array[i] = array[min];
-        array[min] = temp;
-    }
-}
-
-Console.WriteLine($"[{String.Join(',', array)}]");
+int[] array = CreateArray(10);
+Show(array);
 SortSelection(array);
-Console.WriteLine($"[{String.Join(',', array)}]");
-
-
-
+Show(array);
 
 
 
