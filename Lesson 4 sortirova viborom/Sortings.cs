@@ -1,6 +1,6 @@
 public static class Sortings
 {
-    public static void SortSelection(int[] array)
+    public static int[] SortSelection(this int[] array)
     {
         for (int i = 0; i < array.Length - 1; i++)
         {
@@ -12,5 +12,6 @@ public static class Sortings
             array[i] = array[min];
             array[min] = temp;
         }
+        return array;
     }
 }
